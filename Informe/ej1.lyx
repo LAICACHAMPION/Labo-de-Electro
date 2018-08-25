@@ -1,0 +1,984 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{makecell}		%Para emprolijar celdas de tablas
+\usepackage{amsmath}
+\usepackage{upgreek}		%puedo usar \uptau que es como \tau pero con mas rulito
+\usepackage{steinmetz}
+\usepackage{mathtools}
+\usepackage{placeins}
+\usepackage[textwidth=14cm]{geometry}	%texto ocupa mas ancho de pagina
+\usepackage{xcolor}		%se usa en \code
+
+\usepackage[american]{circuitikz}
+
+\usepackage[parfill]{parskip}		%pone espacio entre parrafos
+\setlength{\parindent}{10pt}		%cuanta sangria al principio de un parrafo
+\usepackage{indentfirst}		%pone sangria al primer parrafo de una seccion
+
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\DeclarePairedDelimiter\abs{\lvert}{\rvert} %
+\makeatletter	%magia de categoria de caracteres en Tex, ignorar
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother	%magia de categoria de caracteres en Tex, ignorar
+
+%Definicion comando \parsum: hace re piola el simbolo de la suma en paralelo
+\newcommand{\parsum}{\mathbin{\!/\mkern-5mu/\!}} 
+
+%Definicion comando \code: poen el texto en fuente monoespaciada con fondo gris 
+%al estilo del codigo de stack overflow
+\definecolor{light-gray}{gray}{0.95} 
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Circuito RC
+\end_layout
+
+\begin_layout Standard
+Un circuito RC consta de una resistencia en serie con un capacitor.
+ Esta configuración resulta en un filtro de primer orden, que se puede utilizar
+ como pasa bajos o como altos, según si la salida se mide en el capacitor
+ o en la resistencia respectivamente.
+ 
+\end_layout
+
+\begin_layout Subsection
+Impedancia de los componentes
+\end_layout
+
+\begin_layout Standard
+Los valores comerciales que se procur
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'o conseguir fueron
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $R=5.6k\Omega$
+\end_inset
+
+ y 
+\begin_inset Formula $C=1.2nF$
+\end_inset
+
+.
+ Los componentes elegidos fueron un resistor de metal-film y un capacitor
+ de film, ambos con una tolerancia del 
+\begin_inset Formula $5\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Para testear la precisi
+\backslash
+'on de estos valores, se busc
+\backslash
+'o contrastar estos valores con los medidos directamente a trav
+\backslash
+'es del analizador de impedancias, e indirectamente a trav
+\backslash
+'es de la tensi
+\backslash
+'on en el capacitor y en la entrada.
+ Con estos 
+\backslash
+'ultimos valores, y teniendo los valores de $R$ y la frecuencia, aplicando
+ un divisor de tensiones obtenemos que:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$$V_c = 
+\backslash
+frac{1}{sCR+1} 
+\backslash
+cdot V_{in}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Reemplazando la frecuencia compleja $s$ por $i2
+\backslash
+pi f$ y tomando m
+\backslash
+'odulo de la expresi
+\backslash
+'on resultante, el valor de C se calcula entonces a partir de la siguiente
+ expresi
+\backslash
+'on:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$$ C = 
+\backslash
+frac{ 
+\backslash
+sqrt{
+\backslash
+abs{
+\backslash
+frac{V_{in}}{V_C}}^2 -1} }{2
+\backslash
+pi fR} $$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+La frecuencia donde se realizaron estas mediciones fue la de corte, que
+ se tom
+\backslash
+'o como $24.3kHz$, donde la atenuaci
+\backslash
+'on correspond
+\backslash
+'ia a $2.9dB$ (el valor m
+\backslash
+'as cercano que se obtuvo a los $3dB$ que te
+\backslash
+'oricamente caen en esta frecuencia).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+abs{V_{in}}(V)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$|V_C|(V)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R(\Omega)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+ calculado
+\begin_inset Formula $(nF)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+ medido
+\begin_inset Formula $(nF)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error
+\begin_inset Formula $(\%)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+te
+\backslash
+'orico
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+5.26
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.75
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+5,600
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.150
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.139
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.00
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R$
+\end_inset
+
+ medido
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+5.26
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.75
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+5,596
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.151
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.139
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.07
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+error del $C$ calculado respecto del te
+\backslash
+'orico a partir del $R$ te
+\backslash
+'orico y del medido.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+La tabla anterior sugerir
+\backslash
+'ia que el valor obtenido a partir del analizador de impedancias de $R$
+ es menos preciso que el comercial.
+ Sin embargo, cabe destacar que la diferencia entre ambos valores de $R$,
+ y tambi
+\backslash
+'en entre los de $C$, es de menos de un $1
+\backslash
+%$, con lo cual podr
+\backslash
+'ia despreciarse esta diferencia y concluir que, a fines pr
+\backslash
+'acticos, ambos valores son iguales.
+ Por otro lado, si bien se utiliz
+\backslash
+'o el valor de $C$ medido a la frecuencia de corte, si se cambiaba la frecuencia
+ en el analizador de impedancias el mismo variaba considerablemente ($1.144nF$
+ a $10kHz$, $1.122nF$ a $100kHz$), con lo cual es razonable concluir que
+ en el valor calculado hay otras fuentes de error, provenientes de que el
+ modelo de capacitor utilizado deja de lado consideraciones como la inductancia
+ y resistencia de las patitas y los cables, que pueden estar influyendo
+ en las mediciones del osciloscopio.
+ Dicho en otras palabras: quiz
+\backslash
+'as no sea del todo correcto considerar que la ca
+\backslash
+'ida de tensi
+\backslash
+'on medida en el capacitor corresponde puramente a reactancia capacitiva,
+ y an
+\backslash
+'alogamente para la resistencia.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Pasa bajos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz}[scale=2]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+def
+\backslash
+xPortLeft{0}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+def
+\backslash
+yTerminalBottom{0}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+def
+\backslash
+yR{1.5}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+def
+\backslash
+xL{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+def
+\backslash
+xR{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+def
+\backslash
+xC{1.5}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+def
+\backslash
+xPortRight{2.25}
+\end_layout
+
+\begin_layout Plain Layout
+
+    % left loop
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw                               (
+\backslash
+xPortLeft,
+\backslash
+yR)
+\end_layout
+
+\begin_layout Plain Layout
+
+            to[R=$R$]                   (
+\backslash
+xR, 
+\backslash
+yR)
+\end_layout
+
+\begin_layout Plain Layout
+
+            to[short]                   (
+\backslash
+xC,
+\backslash
+yR)
+\end_layout
+
+\begin_layout Plain Layout
+
+            to[C, l_=$C$,*-*]           (
+\backslash
+xC,
+\backslash
+yTerminalBottom)
+\end_layout
+
+\begin_layout Plain Layout
+
+            to[short,i=$i(t)$]          (
+\backslash
+xPortLeft,
+\backslash
+yTerminalBottom)
+\end_layout
+
+\begin_layout Plain Layout
+
+            to[open,v^<=$V_g(t)$,o-o]   (
+\backslash
+xPortLeft,
+\backslash
+yR);
+\end_layout
+
+\begin_layout Plain Layout
+
+    % right branch
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw                               (
+\backslash
+xC,
+\backslash
+yR)
+\end_layout
+
+\begin_layout Plain Layout
+
+            to[short]                   (
+\backslash
+xPortRight,
+\backslash
+yR)
+\end_layout
+
+\begin_layout Plain Layout
+
+            to[open,v^=$V_C(t)$,o-o]    (
+\backslash
+xPortRight,
+\backslash
+yTerminalBottom)
+\end_layout
+
+\begin_layout Plain Layout
+
+            to[short]                   (
+\backslash
+xC,
+\backslash
+yTerminalBottom);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{circuitikz}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+circuito RC pasabajos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
