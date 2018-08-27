@@ -71,6 +71,22 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "ej1/ej1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "labo_tp1_anexo.lyx"
+
+\end_inset
+
 
 \end_layout
 

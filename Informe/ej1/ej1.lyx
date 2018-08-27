@@ -268,7 +268,6 @@ La frecuencia donde se realizaron estas mediciones fue la de corte, que
 \end_layout
 
 \begin_layout Standard
-\noindent
 \align center
 \begin_inset Float table
 placement H
@@ -758,9 +757,13 @@ La tabla anterior sugerir
 'alogamente para la resistencia.
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -1089,7 +1092,9 @@ circ$), en lugar de medirse la fase entre $V_C$ e $i$, se midi
 
 Se obtuvo entonces la siguiente medici
 \backslash
-'on:
+'on, con tensi
+\backslash
+'on de entrada $20V_{pp}$:
 \end_layout
 
 \end_inset
@@ -1106,6 +1111,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename fotos/labo_tp1_ej1_fase.png
 	scale 40
@@ -1130,6 +1136,64 @@ fase entre $V_C$ e $i$
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Se observa que la tensi
+\backslash
+'on en la resistencia adelanta $90^
+\backslash
+circ$ a la del capacitor, o lo que es lo mismo, la tensi
+\backslash
+'on en el capacitor atrasa $90^
+\backslash
+circ$ a la corriente.
+ Se puede confeccionar a partir de estos datos el siguiente diagrama fasorial:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fotos/diagfas.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+diagrama fasorial de tensiones
 \end_layout
 
 \end_inset
