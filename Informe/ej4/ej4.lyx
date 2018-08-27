@@ -12,10 +12,9 @@
 \usepackage{steinmetz}
 \usepackage{mathtools}
 \usepackage{placeins}
-%\usepackage[textwidth=14cm]{geometry}	%texto ocupa mas ancho de pagina
+\usepackage[textwidth=14cm]{geometry}	%texto ocupa mas ancho de pagina
 \usepackage{xcolor}		%se usa en \code
 
-\usepackage[american]{circuitikz}
 
 \usepackage[parfill]{parskip}		%pone espacio entre parrafos
 \setlength{\parindent}{10pt}		%cuanta sangria al principio de un parrafo
@@ -66,7 +65,7 @@
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry true
+\use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -90,10 +89,6 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
-\topmargin 2cm
-\rightmargin 2cm
-\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -112,32 +107,6 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "ej1/ej1.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "ej2/ej2.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "labo_tp1_anexo.lyx"
-
-\end_inset
-
 
 \end_layout
 
