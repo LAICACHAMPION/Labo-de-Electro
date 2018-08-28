@@ -369,127 +369,10 @@ status open
 
 \begin_layout Plain Layout
 
-El circuito se construyó con los siguientes componentes
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$C$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$5.6 K 
+El circuito se construyó con los mismos componentes del circuito pasa bajos
+ ($R=5.596k
 \backslash
-Omega$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$1.2nF$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Componentes del circuito
-\end_layout
-
-\end_inset
-
-
+Omega$ y $C=1.139nF$).
 \end_layout
 
 \end_inset
@@ -535,9 +418,7 @@ frac {V_{R}}{R}=
 \backslash
 frac{V_{G}}{R + 
 \backslash
-frac{1}{S 
-\backslash
-cdot C}}
+frac{1}{sC}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -561,21 +442,21 @@ begin{equation}
 
 \begin_layout Plain Layout
 
-H(S)=
+H(s)=
 \backslash
-frac{V_{R}}{V_{g}}=
+frac{V_{R}}{V_{G}}=
 \backslash
-frac {R 
+frac {RC 
 \backslash
-cdot S 
+cdot s}{
 \backslash
-cdot C}{
+frac{s}{
 \backslash
-frac{S}{
+left(
 \backslash
-frac{1}{R 
+frac{1}{RC}
 \backslash
-cdot C}}+1} 
+right)}+1} 
 \backslash
 label{eq=tfF}
 \end_layout
@@ -616,22 +497,29 @@ A partir de la ecuaci
 \backslash
 'on 
 \backslash
-ref{eq=tfF}, podemos hallar la respuesta en frecuencia evaluandola en $S=
- i 
+ref{eq=tfF}, podemos hallar la respuesta en frecuencia evaluandola en $s=
+ i2
 \backslash
-cdot 2 
+pi f$.
+ Dicha función transferencia corresponde a un sistema de primer orden.
+ Posee un cero en el origen y un polo en $f_{p}=25kHz$ (caculado a partir
+ de la respuesta en frecuencia y de los valores de los componentes utilizados).
+ Se esperar
 \backslash
-cdot 
+'ia que la fase comience en $90^
 \backslash
-pi 
+circ$, una decada antes comience a descender m
 \backslash
-cdot f$.Dicha función transferencia coresponde a un sistema de primer orden.
- Posee un cero en el orgen y un polo en $f_{p}=24 KHz$ (caculado a partir
- de la respuesta en frecuencia y de los valores de los componentes utilizados.
- Se esperaria que la fase comienze en 90 grados, una decada antes $f_{p}$
- sea 45 grados y una decada despues de $f_{p}$ 0 grados.
- En cuanto a la magnitud se esperaria que caiga 20dB por decada antes de
- $f_{p}$ y luego se estabilize en 0 dB.
+'as notablemente, llegando a $45^
+\backslash
+circ$ en $f_{p}$, y una decada despues de $f_{p}$ sea $0^
+\backslash
+circ$.
+ En cuanto a la magnitud, se esperar
+\backslash
+'ia que suba $20dB$ por d
+\backslash
+'ecada antes de $f_{p}$ y luego se estabilice en $0dB$.
 \end_layout
 
 \end_inset
@@ -742,20 +630,20 @@ Las figuras
 \backslash
 ref{fig=ej2Mag} y 
 \backslash
-ref{fig=ej2Fase}, son la superposicion de la respuesta en frecuencia medida
+ref{fig=ej2Fase} son la superposicion de la respuesta en frecuencia medida
  la calculada y la medida indirectamente en el circuito pasa bajos.
 \end_layout
 
 \begin_layout Plain Layout
 
 La medicion de la respuesta en frecuencia en el circuito pasa bajos se obtuvo
- de la siguiente manera, suponiendo que el desfasaje entre la tensi
+ de la siguiente manera: suponiendo que el desfasaje entre la tensi
 \backslash
 'on en la resistencia y el capacitor es de $90^
 \backslash
-circ$, si esto fuese cierto para todas las frecuencias, podr
+circ$, entonces se podr
 \backslash
-'iamos obtener para cada $V_C$ y $V_{in}$ a $|V_R|=
+'ia obtener para cada $V_C$ y $V_{in}$ a $|V_R|=
 \backslash
 sqrt{V_{in}^2-V_C^2}$ y $
 \backslash
@@ -773,11 +661,16 @@ circ$.
 \begin_layout Plain Layout
 
 Se puede observar en ambos graficos que el modelo predice con considerable
- precisión a la realidad.
- Sin embargo la medicion directa e indirecta en ciertos casos difieren.Estas
- diferencias se pueden dever a que para medir indirectamente la tension
- en la resitencia, se hizo la suposicion que a toda frecuencia la corriente
- y la tencion en el RC estan defasados 90 grados.
+ precisión lo que se mide en el circuito.
+ Sin embargo las mediciones directa e indirecta en ciertos casos difieren.
+ Estas diferencias se pueden deber a que para medir indirectamente la tensi
+\backslash
+'on en la resitencia, se hizo la suposici
+\backslash
+'on que a toda frecuencia la corriente y la tencion en el RC estan desfasados
+ $90^
+\backslash
+circ$.
    
 \end_layout
 
@@ -808,8 +701,10 @@ status open
 
 \begin_layout Plain Layout
 
-Se exito al circuito con señales triangulares de distintas frecuencias.
- En esta sección las señales amraillas representan la entrada y las verdes
+Se excit
+\backslash
+'o al circuito con señales triangulares de distintas frecuencias.
+ En esta sección, las señales amarillas representan la entrada y las verdes
  representan la salida.
 \end_layout
 
@@ -871,15 +766,15 @@ status open
 
 \begin_layout Plain Layout
 
-En frecuencias, una decada por devajo de $f_{P}$, el numerador de la función
- transferencia se puede aproximar a uno, de esta manera la feuncion transferenci
-a se puede aproximar a $H(s)=R 
+En frecuencias una d
 \backslash
-cdot s 
+'ecada por debajo de $f_{P}$, el numerador de la función transferencia se
+ puede aproximar a 1, y de esta manera la funci
 \backslash
-cdot C$, antitransformando por laplace, se obtiene que $V_{R}=R 
+'on transferencia se puede aproximar a $H(s)=s 
 \backslash
-cdot C 
+cdot RC$.
+ Antitransformando por Laplace, se obtiene que $V_{R}=RC 
 \backslash
 cdot 
 \backslash
@@ -947,12 +842,15 @@ status open
 
 \begin_layout Plain Layout
 
-Tal como se predijo anteriormente el circuito no se comporta como inegrador.
+Tal como se predijo anteriormente el circuito no se comporta como derivador.
  El tiempo caracteristico del circuito es $
 \backslash
-tau =6.7us$ y la mitad del perido de la señal es de $21uS$ del orden de cinco
- veces el tiempo caracteristico lo que se observa en la figura es como el
- trnasitorio del circuito deforma la señal den entrada.
+tau =6.7
+\backslash
+mu s$ y la mitad del perido de la señal es de $21
+\backslash
+mu s$ del orden de cinco veces el tiempo caracteristico lo que se observa
+ en la figura es como el trnasitorio del circuito deforma la señal de entrada.
  
 \end_layout
 
@@ -967,10 +865,6 @@ placement H
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -988,10 +882,6 @@ Respuesta a señal triangular de 100 KHz
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 

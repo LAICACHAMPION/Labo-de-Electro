@@ -40,6 +40,11 @@
 %al estilo del codigo de stack overflow
 \definecolor{light-gray}{gray}{0.95} 
 \newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
+\AtBeginDocument{\renewcommand\contentsname{Índice}}
+\AtBeginDocument{\renewcommand\figurename{Figura}}
+\AtBeginDocument{\renewcommand\contentsname{Índice}}
+\AtBeginDocument{\renewcommand\tablename{Tabla}}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -114,6 +119,46 @@
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
+filename "Caratula.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
 filename "ej1/ej1.lyx"
 
 \end_inset
@@ -126,6 +171,33 @@ filename "ej1/ej1.lyx"
 LatexCommand input
 filename "ej2/ej2.lyx"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "ej3/ej3.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "ej4/ej4.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 

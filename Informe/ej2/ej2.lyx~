@@ -774,12 +774,11 @@ circ$.
 
 Se puede observar en ambos graficos que el modelo predice con considerable
  precisión a la realidad.
- Sin embargo la medicion directa e indirecta en cierto caso difieren.
- Entre $f_{P}0.1$ y $f_{P}$ en el grafico de la fase se observa que la deiferenci
-a de fase deja de ser 90 grados, por ende el calculo usado para medir la
- magnitud indirectamente deja de ser verdadero provocando diferencias con
- la megnitud medida directamente y la calculada.
- 
+ Sin embargo la medicion directa e indirecta en ciertos casos difieren.Estas
+ diferencias se pueden dever a que para medir indirectamente la tension
+ en la resitencia, se hizo la suposicion que a toda frecuencia la corriente
+ y la tencion en el RC estan defasados 90 grados.
+   
 \end_layout
 
 \end_inset

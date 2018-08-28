@@ -163,7 +163,7 @@ status open
 
 
 \backslash
-item
+item 
 \end_layout
 
 \end_inset
@@ -207,7 +207,7 @@ status open
 
 
 \backslash
-item
+item 
 \end_layout
 
 \end_inset
@@ -306,7 +306,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Imágenes/bode_sheet1.png
+	filename Imágenes/labo_tp1_ej4_x1.png
+	scale 80
 
 \end_inset
 
@@ -344,7 +345,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Imágenes/bode_sheet2.png
+	filename Imágenes/labo_tp1_ej4_x10.png
+	scale 80
 
 \end_inset
 
