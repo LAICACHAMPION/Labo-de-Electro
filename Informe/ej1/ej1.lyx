@@ -268,7 +268,6 @@ La frecuencia donde se realizaron estas mediciones fue la de corte, que
 \end_layout
 
 \begin_layout Standard
-\noindent
 \align center
 \begin_inset Float table
 placement H
@@ -758,9 +757,13 @@ La tabla anterior sugerir
 'alogamente para la resistencia.
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -793,7 +796,7 @@ En primer lugar, se conect
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1022,6 +1025,19 @@ Fase de
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{sssec:fase}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1089,7 +1105,9 @@ circ$), en lugar de medirse la fase entre $V_C$ e $i$, se midi
 
 Se obtuvo entonces la siguiente medici
 \backslash
-'on:
+'on, con tensi
+\backslash
+'on de entrada $20V_{pp}$:
 \end_layout
 
 \end_inset
@@ -1103,12 +1121,13 @@ Se obtuvo entonces la siguiente medici
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename fotos/labo_tp1_ej1_fase.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -1135,6 +1154,101 @@ fase entre $V_C$ e $i$
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Se observa que la tensi
+\backslash
+'on en la resistencia adelanta $90^
+\backslash
+circ$ a la del capacitor, o lo que es lo mismo, la tensi
+\backslash
+'on en el capacitor atrasa $90^
+\backslash
+circ$ a la corriente.
+ Este es exactamente el comporamiento que esper
+\backslash
+'abamos de un componente puramente capacitivo (lo cual no implica que se
+ pueda considerar ideal para cualquier $f$, sobre todo teniendo en mente
+ lo discutido en la secci
+\backslash
+'on anterior).
+ Se puede confeccionar a partir de estos datos el siguiente diagrama fasorial:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fotos/diagfas.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+diagrama fasorial de tensiones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+En este 
+\backslash
+'ultimo gr
+\backslash
+'afico se puede apreciar que sumando ambas tensiones se recupera $V_{in}
+ = 20V$, y que la misma est
+\backslash
+'a aproximadamente $45^
+\backslash
+circ$ adelantada respecto de $V_R$ y $45^
+\backslash
+circ$ atrasada respecto de $V_C$.
+ Esto se debe a que, en m
+\backslash
+'odulo, el potencial que cae en ambos componentes es pr
+\backslash
+'acticamente el mismo para esta frecuencia ($24kHz$).
 \end_layout
 
 \end_inset
@@ -1466,6 +1580,288 @@ Se observa que el modelo te
 'as susceptible a peque
 \backslash
 ~nos ruidos externos.
+ Para la fase se suma a todo esto el hecho de que los intervalos de tiempo
+ que representan un grado se van haciendo cada vez m
+\backslash
+'as peque
+\backslash
+~nos y, por lo tanto, el error relativo de estas mediciones aumenta.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+se
+\backslash
+~nales
+\end_layout
+
+\end_inset
+
+ cuadradas
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Se excit
+\backslash
+'o al circuito con se
+\backslash
+~nales cuadradas de distintas frecuencias.
+ Para las im
+\backslash
+'agenes de esta secci
+\backslash
+'on, la se
+\backslash
+~nal amarilla representa la entrada y la verde la salida.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fotos/labo_tp1_ej1_cuadrada_200kHz.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+respuesta a se
+\backslash
+~nal cuadrada de $200kHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Para esta frecuencia, que es casi 10 veces mayor que la frecuencia de corte,
+ el circuito se comporta como un integrador, convirtiendo la cuadrada de
+ la entrada en una se
+\backslash
+~nal triangular.
+ Esto coincide con lo que predice la funci
+\backslash
+'on transferencia 
+\backslash
+ref{eq:Hpb} para estas frecuencias: si $f
+\backslash
+gg f_p$, entonces $H(s)
+\backslash
+simeq 
+\backslash
+frac{1}{RC} 
+\backslash
+cdot 
+\backslash
+frac{1}{s}$, que corresponde a un integrador.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fotos/labo_tp1_ej1_cuadrada_24kHz.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+respuesta a se
+\backslash
+~nal cuadrada de $10kHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+En este caso, con una frecuencia del mismo orden que $f_p$, el circuito
+ ya no se comporta como integrador.
+ En cambio, como aqu
+\backslash
+'i el tiempo en que la se
+\backslash
+~nal se mantiene constante ($
+\backslash
+frac{T}{2}=50
+\backslash
+mu s$) es del mismo orden que el tiempo que tarda el circuito a llegar al
+ r
+\backslash
+'egimen permanente ($6
+\backslash
+tau=6RC
+\backslash
+simeq 38
+\backslash
+mu s$), lo que se observa es el proceso de carga y descarga del capacitor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fotos/labo_tp1_ej1_cuadrada_20Hz.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+respuesta a se
+\backslash
+~nal cuadrada de $20Hz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Por 
+\backslash
+'ultimo, en este caso la forma de la se
+\backslash
+~nal se conserva completamente.
+ Esto se debe a que el tiempo del transitorio es despreciable frente al
+ per
+\backslash
+'iodo de la se
+\backslash
+~nal de entrada.
 \end_layout
 
 \end_inset

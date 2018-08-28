@@ -729,5 +729,109 @@ Como se observa en ambas figuras
 
 \end_layout
 
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ESTO ES LO CALCULADO CON VC Y VIN DEL EJERCICIO 1G
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Siendo que obtuvimos en 
+\backslash
+label{sssec:fase} que el desfasaje entre la tensi
+\backslash
+'on en la resistencia y el capacitor es de $90^
+\backslash
+circ$, si esto fuese cierto para todas las frecuencias, podr
+\backslash
+'iamos obtener para cada $V_C$ y $V_{in}$ a $|V_R|=
+\backslash
+sqrt{V_{in}^2-V_C^2}$ y $
+\backslash
+phase{V_R}= 
+\backslash
+phase{V_C}+90^
+\backslash
+circ$.
+ Con las mediciones efectuadas para graficar la transferencia al capacitor,
+ la transferencia a la resistencia resultar
+\backslash
+'ia ser la siguiente:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imagenes/labo_tp1_ej1_g_mag.png
+	scale 55
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes/labo_tp1_ej1_g_pha.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+EL PUNTO QUE FALTA ES PORQUE DABA VOUT=0 -> -INF DB.
+ POR ESO NO SE JUNTAN LOS PUNTOS
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+diagrama de Bode de 
+\begin_inset Formula $H(f)=\frac{V_{R}(f)}{V_{in}(f)}$
+\end_inset
+
+ calculado a partir de las mediciones de 
+\begin_inset Formula $V_{c}(f)$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{in}(f)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

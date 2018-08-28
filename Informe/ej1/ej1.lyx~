@@ -268,7 +268,6 @@ La frecuencia donde se realizaron estas mediciones fue la de corte, que
 \end_layout
 
 \begin_layout Standard
-\noindent
 \align center
 \begin_inset Float table
 placement H
@@ -758,9 +757,13 @@ La tabla anterior sugerir
 'alogamente para la resistencia.
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -1089,7 +1092,9 @@ circ$), en lugar de medirse la fase entre $V_C$ e $i$, se midi
 
 Se obtuvo entonces la siguiente medici
 \backslash
-'on:
+'on, con tensi
+\backslash
+'on de entrada $20V_{pp}$:
 \end_layout
 
 \end_inset
@@ -1106,6 +1111,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename fotos/labo_tp1_ej1_fase.png
 	scale 40
@@ -1130,6 +1136,64 @@ fase entre $V_C$ e $i$
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Se observa que la tensi
+\backslash
+'on en la resistencia adelanta $90^
+\backslash
+circ$ a la del capacitor, o lo que es lo mismo, la tensi
+\backslash
+'on en el capacitor atrasa $90^
+\backslash
+circ$ a la corriente.
+ Se puede confeccionar a partir de estos datos el siguiente diagrama fasorial:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fotos/diagfas.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+diagrama fasorial de tensiones
 \end_layout
 
 \end_inset
@@ -1260,38 +1324,119 @@ circ$ en $f_p$ y se estabilice en $90^
 circ$, siguiendo el comportamiento de la funci
 \backslash
 'on arcotangente en las transiciones.
-\backslash
-par
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-Midiendo la tensi
-\backslash
-'on pico a pico en la entrada y en el capacitor, as
-\backslash
-'i como la fase entre ellas, a distintas frecuencias, se obtuvo el diagrama
- de bode del circuito.
- Para compararlo con lo que esper
-\backslash
-'abamos a partir del an
-\backslash
-'alisis te
-\backslash
-'orico se superpusieron los gr
-\backslash
-'aficos utilizando 
-\backslash
-textit{Matlab}:
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Midiendo la 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+tensi
+\backslash
+'on
+\end_layout
+
+\end_inset
+
+ pico a pico en la entrada y en el capacitor, as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'i
+\end_layout
+
+\end_inset
+
+ como la fase entre ellas, a distintas frecuencias, se obtuvo el diagrama
+ de bode del circuito
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Las mediciones se encuentran tabuladas en el anexo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Para compararlo con lo que esper
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'
+\end_layout
+
+\end_inset
+
+abamos a partir del an
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'a
+\end_layout
+
+\end_inset
+
+lisis te
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'o
+\end_layout
+
+\end_inset
+
+rico se superpusieron los gr
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'a
+\end_layout
+
+\end_inset
+
+ficos utilizando 
+\emph on
+Matlab
+\emph default
+:
 \end_layout
 
 \begin_layout Standard
@@ -1341,10 +1486,6 @@ diagrama de Bode del circuito RC pasabajos
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -1356,7 +1497,39 @@ status open
 
 \begin_layout Plain Layout
 
-De esta 
+Se observa que el modelo te
+\backslash
+'orico utilizado predice con una considerable precisi
+\backslash
+'on los resultados obtenidos experimentalmente.
+ Esto es especialmente cierto para frecuencias bajas, donde los gr
+\backslash
+'aficos se encuentran pr
+\backslash
+'acticamente superpuestos.
+ Sin embargo, a medida que la frecuencia aumenta (para frecuencias mayores
+ a $f_p$), las diferencias se hacen m
+\backslash
+'as apreciables, sobre todo en la fase.
+ Esto puede deberse a que la impedancia producto de las inductancias par
+\backslash
+'asitas presentes en el circuito (por ejemplo en las patitas de los componentes,
+ o inherentes al proceso de fabricaci
+\backslash
+'on de los mismos) se hacen menos despreciables al aumentar la frecuencia.
+ Asimismo, al aumentar la atenuaci
+\backslash
+'on, la tensi
+\backslash
+'on de salida se hace m
+\backslash
+'as peque
+\backslash
+~na y, por lo tanto, m
+\backslash
+'as susceptible a peque
+\backslash
+~nos ruidos externos.
 \end_layout
 
 \end_inset
