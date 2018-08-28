@@ -363,6 +363,140 @@ circuito RC pasa altos
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+El circuito se construyó con los siguientes componentes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5.6 K 
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1.2nF$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Componentes del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 \begin_inset ERT
 status open
@@ -441,7 +575,7 @@ frac{S}{
 \backslash
 frac{1}{R 
 \backslash
-cdot C}}+1}
+cdot C}}+1} 
 \end_layout
 
 \begin_layout Plain Layout
@@ -449,6 +583,16 @@ cdot C}}+1}
 
 \backslash
 end{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+A partir de los volaroes de los compoenentes y de la funcion transferencia
+ se obtuvo la frecuencia de corte del circuito $f_{P}=149 kHz$
 \end_layout
 
 \end_inset
@@ -475,7 +619,7 @@ Respuesta en frecuencia
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -493,6 +637,19 @@ status collapsed
 
 \begin_layout Plain Layout
 Respuesta en frecuencia Magnitud
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+label{fig=ej2Mag}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -510,7 +667,7 @@ Respuesta en frecuencia Magnitud
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -530,9 +687,18 @@ Respuesta en frecuencia Fase
 \end_inset
 
 
-\end_layout
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
+
+
+\backslash
+label{fig=ej2Fase}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -547,7 +713,15 @@ status open
 
 \begin_layout Plain Layout
 
-j
+La figura 
+\backslash
+ref{fig=ej2Mag} es la superposicion ,del modulo de la respuesta en frecuencia,
+ calculado, medido y medido en el ej 1.
+\end_layout
+
+\begin_layout Plain Layout
+
+Como se observa en ambas figuras
 \end_layout
 
 \end_inset
