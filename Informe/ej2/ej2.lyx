@@ -576,6 +576,8 @@ frac{S}{
 frac{1}{R 
 \backslash
 cdot C}}+1} 
+\backslash
+label{eq=tfF}
 \end_layout
 
 \begin_layout Plain Layout
@@ -583,16 +585,6 @@ cdot C}}+1}
 
 \backslash
 end{equation}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-A partir de los volaroes de los compoenentes y de la funcion transferencia
- se obtuvo la frecuencia de corte del circuito $f_{P}=149 kHz$
 \end_layout
 
 \end_inset
@@ -607,6 +599,39 @@ status open
 \begin_layout Plain Layout
 
 Respuesta en frecuencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+A partir de la ecuaci
+\backslash
+'on 
+\backslash
+ref{eq=tfF}, podemos hallar la respuesta en frecuencia evaluandola en $S=
+ i 
+\backslash
+cdot 2 
+\backslash
+cdot 
+\backslash
+pi 
+\backslash
+cdot f$.Dicha función transferencia coresponde a un sistema de primer orden.
+ Posee un cero en el orgen y un polo en $f_{p}=24 KHz$ (caculado a partir
+ de la respuesta en frecuencia y de los valores de los componentes utilizados.
+ Se esperaria que la fase comienze en 90 grados, una decada antes $f_{p}$
+ sea 45 grados y una decada despues de $f_{p}$ 0 grados.
+ En cuanto a la magnitud se esperaria que caiga 20dB por decada antes de
+ $f_{p}$ y luego se estabilize en 0 dB.
 \end_layout
 
 \end_inset
@@ -713,45 +738,18 @@ status open
 
 \begin_layout Plain Layout
 
-La figura 
+Las figuras 
 \backslash
-ref{fig=ej2Mag} es la superposicion ,del modulo de la respuesta en frecuencia,
- calculado, medido y medido en el ej 1.
-\end_layout
-
-\begin_layout Plain Layout
-
-Como se observa en ambas figuras
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-ESTO ES LO CALCULADO CON VC Y VIN DEL EJERCICIO 1G
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-Siendo que obtuvimos en 
+ref{fig=ej2Mag} y 
 \backslash
-label{sssec:fase} que el desfasaje entre la tensi
+ref{fig=ej2Fase}, son la superposicion de la respuesta en frecuencia medida
+ la calculada y la medida indirectamente en el circuito pasa bajos.
+\end_layout
+
+\begin_layout Plain Layout
+
+La medicion de la respuesta en frecuencia en el circuito pasa bajos se obtuvo
+ de la siguiente manera, suponiendo que el desfasaje entre la tensi
 \backslash
 'on en la resistencia y el capacitor es de $90^
 \backslash
@@ -766,10 +764,53 @@ phase{V_R}=
 phase{V_C}+90^
 \backslash
 circ$.
- Con las mediciones efectuadas para graficar la transferencia al capacitor,
- la transferencia a la resistencia resultar
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Se puede observar en ambos graficos que el modelo predice con considerable
+ precisión a la realidad.
+ Sin embargo la medicion directa e indirecta en ciertos casos difieren.Estas
+ diferencias se pueden dever a que para medir indirectamente la tension
+ en la resitencia, se hizo la suposicion que a toda frecuencia la corriente
+ y la tencion en el RC estan defasados 90 grados.
+   
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Respuesta a se
 \backslash
-'ia ser la siguiente:
+~nales trinagulares
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Se exito al circuito con señales triangulares de distintas frecuencias.
+ En esta sección las señales amraillas representan la entrada y las verdes
+ representan la salida.
 \end_layout
 
 \end_inset
@@ -779,53 +820,193 @@ circ$.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename imagenes/labo_tp1_ej1_g_mag.png
-	scale 55
+	filename imagenes/ej29_d5.png
+	scale 40
 
 \end_inset
 
 
-\begin_inset Graphics
-	filename imagenes/labo_tp1_ej1_g_pha.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-EL PUNTO QUE FALTA ES PORQUE DABA VOUT=0 -> -INF DB.
- POR ESO NO SE JUNTAN LOS PUNTOS
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-diagrama de Bode de 
-\begin_inset Formula $H(f)=\frac{V_{R}(f)}{V_{in}(f)}$
+Respuesta a señal triangular de 500 Hz 
+\end_layout
+
 \end_inset
 
- calculado a partir de las mediciones de 
-\begin_inset Formula $V_{c}(f)$
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{fig=ej2_500hz}
+\end_layout
+
 \end_inset
 
- y 
-\begin_inset Formula $V_{in}(f)$
+
+\end_layout
+
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+En frecuencias, una decada por devajo de $f_{P}$, el numerador de la función
+ transferencia se puede aproximar a uno, de esta manera la feuncion transferenci
+a se puede aproximar a $H(s)=R 
+\backslash
+cdot s 
+\backslash
+cdot C$, antitransformando por laplace, se obtiene que $V_{R}=R 
+\backslash
+cdot C 
+\backslash
+cdot 
+\backslash
+frac {dV_{g}}{dt}$, es decir el sistema se comporta como un derivador, tal
+ como se observa en la figura 
+\backslash
+ref{fig=ej2_500hz}.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imagenes/ej29_d4.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta a señal triangular de 24 KHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{fig=ej2_24k}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Tal como se predijo anteriormente el circuito no se comporta como inegrador.
+ El tiempo caracteristico del circuito es $
+\backslash
+tau =6.7us$ y la mitad del perido de la señal es de $21uS$ del orden de cinco
+ veces el tiempo caracteristico lo que se observa en la figura es como el
+ trnasitorio del circuito deforma la señal den entrada.
  
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imagenes/ej29_d6.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta a señal triangular de 100 KHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
 \end_layout
 
 \end_inset
