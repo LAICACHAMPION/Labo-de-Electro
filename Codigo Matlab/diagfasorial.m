@@ -8,14 +8,11 @@ handle.LineWidth = 2;
 
 handle = compass(Vr, 'r');
 handle.LineWidth = 2;
-handle = compass(Vr/r);
-handle.LineWidth = 3;
-
 
 ax = gca;
 ax.TickLabelInterpreter = 'latex';
 ax.LineWidth = 2;
-lg = legend('$V_R+V_C$', '$V_C$', '$V_R$', 'I');
+lg = legend('$V_R+V_C$', '$V_C$', '$V_R$');
 lg.Interpreter = 'latex';
 set(ax,'TickLabelInterpreter','latex');
 grid on;
