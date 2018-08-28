@@ -796,7 +796,7 @@ En primer lugar, se conect
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1025,6 +1025,19 @@ Fase de
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{sssec:fase}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1108,13 +1121,13 @@ Se obtuvo entonces la siguiente medici
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename fotos/labo_tp1_ej1_fase.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -1184,7 +1197,7 @@ circ$ a la corriente.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1223,8 +1236,8 @@ En este
 \backslash
 'ultimo gr
 \backslash
-'afico se puede apreciar que sumando ambas tensiones se recupera $V_in =
- 20V$, y que la misma est
+'afico se puede apreciar que sumando ambas tensiones se recupera $V_{in}
+ = 20V$, y que la misma est
 \backslash
 'a aproximadamente $45^
 \backslash
@@ -1623,15 +1636,18 @@ Se excit
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename fotos/labo_tp1_ej1_cuadrada_200kHz.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -1701,14 +1717,18 @@ frac{1}{s}$, que corresponde a un integrador.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename fotos/labo_tp1_ej1_cuadrada_24kHz.png
+	scale 50
 
 \end_inset
 
@@ -1778,12 +1798,15 @@ mu s$), lo que se observa es el proceso de carga y descarga del capacitor.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename fotos/labo_tp1_ej1_cuadrada_20Hz.png
 	scale 50
