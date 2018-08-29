@@ -229,8 +229,8 @@ underline{filtro BW}
  disminuye la frecuencia de corte del pasabajos del osciloscopio (para el
  RIGOL esta nueva frecuencia de corte pasa a ser de 20MHz) para atenuar
  componentes en frecuencias del ruido que sean superiores a la frecuencia
- de corte del osciloscopio que pertenezcan a regiones que no resulten de
- interés, disminuyendo así la relación señal-ruido.
+ de corte del osciloscopio y que pertenezcan a regiones que no resulten
+ de interés, disminuyendo así la relación señal-ruido.
  
 \end_layout
 
@@ -380,7 +380,7 @@ Al utilizar una punta X10 para obtener la respuesta en frecuencia, se observa
  una frecuencia de corte mayor porque se utiliza un capacitor más chico
  que la punta X1 por lo cual se moverá la frecuencia de corte más a la derecha
  en el gráfico.
- Los dos gráficos se corresponden con un filtro pasabandas.
+ Los dos gráficos se corresponden con un filtro pasabandas como se esperaba.
 \end_layout
 
 \end_body

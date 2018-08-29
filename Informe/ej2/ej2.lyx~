@@ -635,23 +635,14 @@ Las figuras
 \backslash
 ref{fig=ej2Mag} y 
 \backslash
-ref{fig=ej2Fase} son la superposicion de la respuesta en frecuencia medida
- la calculada y la medida indirectamente en el circuito pasa bajos.
+ref{fig=ej2Fase} son la superposici
 \backslash
-par
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-Aparte de la medici
+'on de la respuesta en frecuencia medida, la calculada y la medida indirectament
+e en el circuito pasa bajos.
+ Esta 
 \backslash
-'on directa de $V_R$, se cuenta con los datos del pasabajos, de los cuales
- se puede obtener $V_R$ de la siguiente manera: suponiendo que el desfasaje
- entre la tensi
+'ultima se obtuvo de la siguiente manera: suponiendo que el desfasaje entre
+ la tensi
 \backslash
 'on en la resistencia y el capacitor es de $90^
 \backslash
@@ -683,8 +674,9 @@ Se puede observar en ambos graficos que el modelo predice con considerable
 \backslash
 'on en la resitencia, se hizo la suposici
 \backslash
-'on que a toda frecuencia la corriente y la tencion en el RC estan desfasados
- $90^
+'on que a toda frecuencia la corriente y la tensi
+\backslash
+'on en el RC estan desfasados $90^
 \backslash
 circ$.
    

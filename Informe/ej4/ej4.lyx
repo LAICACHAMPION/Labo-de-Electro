@@ -327,10 +327,6 @@ Gráfico de Bode con punta X1
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -358,15 +354,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Gráfico de Bode con punta X10 
+Gráfico de Bode con punta x10 
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -376,9 +368,9 @@ Gráfico de Bode con punta X10
 \end_layout
 
 \begin_layout Standard
-Al utilizar una punta X10 para obtener la respuesta en frecuencia, se observa
+Al utilizar una punta x10 para obtener la respuesta en frecuencia, se observa
  una frecuencia de corte mayor porque se utiliza un capacitor más chico
- que la punta X1 por lo cual se moverá la frecuencia de corte más a la derecha
+ que la punta x1 por lo cual se moverá la frecuencia de corte más a la derecha
  en el gráfico.
  Los dos gráficos se corresponden con un filtro pasabandas como se esperaba.
 \end_layout
