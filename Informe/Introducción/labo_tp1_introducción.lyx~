@@ -12,9 +12,9 @@
 \usepackage{steinmetz}
 \usepackage{mathtools}
 \usepackage{placeins}
+\usepackage[textwidth=14cm]{geometry}	%texto ocupa mas ancho de pagina
 \usepackage{xcolor}		%se usa en \code
 
-\usepackage[american]{circuitikz}
 
 \usepackage[parfill]{parskip}		%pone espacio entre parrafos
 \setlength{\parindent}{10pt}		%cuanta sangria al principio de un parrafo
@@ -39,10 +39,6 @@
 %al estilo del codigo de stack overflow
 \definecolor{light-gray}{gray}{0.95} 
 \newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
-
-\AtBeginDocument{\renewcommand\contentsname{Índice}}
-\AtBeginDocument{\renewcommand{\figurename}{Figura}}
-\AtBeginDocument{\renewcommand{\tablename}{Tabla}}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -65,21 +61,11 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement H
 \paperfontsize default
 \spacing single
-\use_hyperref true
-\pdf_bookmarks true
-\pdf_bookmarksnumbered false
-\pdf_bookmarksopen false
-\pdf_bookmarksopenlevel 1
-\pdf_breaklinks false
-\pdf_pdfborder true
-\pdf_colorlinks false
-\pdf_backref false
-\pdf_pdfusetitle true
+\use_hyperref false
 \papersize default
-\use_geometry true
+\use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -103,10 +89,6 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
-\topmargin 2cm
-\rightmargin 2cm
-\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -124,24 +106,15 @@
 
 \begin_body
 
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "Caratula.lyx"
-
-\end_inset
-
-
+\begin_layout Section
+Introducción
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+El objetivo de este trabajo es familiarizarse con el uso de los instrumentos
+ de medición del laboratorio de electrónica, en especial con el osciloscopio
+ como instrumento de medición básico.
+ 
 \begin_inset ERT
 status open
 
@@ -149,7 +122,7 @@ status open
 
 
 \backslash
-tableofcontents
+par
 \end_layout
 
 \end_inset
@@ -158,77 +131,13 @@ tableofcontents
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "Introducción/labo_tp1_introducción.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "ej1/ej1.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "ej2/ej2.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "ej3/ej3.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "ej4/ej4.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "labo_tp1_anexo.lyx"
-
-\end_inset
-
-
+Es así como se realiza mediciones sobre un circuito RC y uno CR, en modo
+ normal y en modo XY.
+ Además, se aprendió a realizar barridos en frecuencia al comunicar dos
+ generadores entré si para sincronizar el trigger con el inicio de la secuencia
+ de barrido.
+ Se realizaron mediciones de respuesta en frecuencia y se observó el efecto
+ de algunos filtros sobre la respuesta del osciloscopio mismo.
 \end_layout
 
 \end_body
