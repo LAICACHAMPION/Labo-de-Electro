@@ -113,7 +113,8 @@ Respuesta en frecuencia del osciloscopio
 \begin_layout Standard
 Se procede a medir la respuesta en frecuencia del osciloscopio con los filtros
  BW y AC activados en simultáneo, que se sabe previamente es la característica
- de un circuito pasabajos.
+ de un circuito pasabanda, con el filtro BW siendo un pasabajos y el AC
+ un pasaltos.
  Teniendo en cuenta lo anterior y que la frecuencia de corte al activar
  el modo BW para el osciloscopio RIGOL del laboratorio será cercano a los
  20 MHz, se decidió cambiar de generador a uno que pudiese abarcar frecuencias
@@ -228,8 +229,8 @@ underline{filtro BW}
  disminuye la frecuencia de corte del pasabajos del osciloscopio (para el
  RIGOL esta nueva frecuencia de corte pasa a ser de 20MHz) para atenuar
  componentes en frecuencias del ruido que sean superiores a la frecuencia
- de corte del osciloscopio que pertenezcan a regiones que no resulten de
- interés, disminuyendo así la relación señal-ruido.
+ de corte del osciloscopio y que pertenezcan a regiones que no resulten
+ de interés, disminuyendo así la relación señal-ruido.
  
 \end_layout
 
@@ -318,15 +319,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Bode 1
+Gráfico de Bode con punta X1
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -357,7 +354,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Bode 2
+Gráfico de Bode con punta x10 
 \end_layout
 
 \end_inset
@@ -365,13 +362,17 @@ Bode 2
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Al utilizar una punta x10 para obtener la respuesta en frecuencia, se observa
+ una frecuencia de corte mayor porque se utiliza un capacitor más chico
+ que la punta x1 por lo cual se moverá la frecuencia de corte más a la derecha
+ en el gráfico.
+ Los dos gráficos se corresponden con un filtro pasabandas como se esperaba.
 \end_layout
 
 \end_body

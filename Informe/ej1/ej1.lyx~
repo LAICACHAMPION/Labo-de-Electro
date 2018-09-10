@@ -119,13 +119,43 @@ Circuito RC
 \begin_layout Standard
 Un circuito RC consta de una resistencia en serie con un capacitor.
  Esta configuración resulta en un filtro de primer orden, que se puede utilizar
- como pasa bajos o como altos, según si la salida se mide en el capacitor
+ como pasa bajos o como pasa altos, según si la salida se mide en el capacitor
  o en la resistencia respectivamente.
- 
+ En este trabajo pr
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'actico se arm
+\backslash
+'o un circuito de este tipo y se analiz
+\backslash
+'o su comportamiento para los dos casos mencionados.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Impedancia de los componentes
+Impedancia de los componentes 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{ssec:impedancia}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -169,7 +199,7 @@ Para testear la precisi
 \backslash
 'on de estos valores, se busc
 \backslash
-'o contrastar estos valores con los medidos directamente a trav
+'o contrastarlos con los medidos directamente a trav
 \backslash
 'es del analizador de impedancias, e indirectamente a trav
 \backslash
@@ -178,7 +208,7 @@ Para testear la precisi
 'on en el capacitor y en la entrada.
  Con estos 
 \backslash
-'ultimos valores, y teniendo los valores de $R$ y la frecuencia, aplicando
+'ultimos valores, y midiendo a su vez a $R$ y a la frecuencia, aplicando
  un divisor de tensiones obtenemos que:
 \end_layout
 
@@ -213,10 +243,7 @@ pi f$ y tomando m
 \backslash
 'odulo de la expresi
 \backslash
-'on resultante, el valor de C se calcula entonces a partir de la siguiente
- expresi
-\backslash
-'on:
+'on resultante, el valor de C se calcula entonces como:
 \end_layout
 
 \begin_layout Plain Layout
@@ -1032,7 +1059,7 @@ status open
 
 
 \backslash
-ref{sssec:fase}
+label{sssec:fase}
 \end_layout
 
 \end_inset
@@ -1327,7 +1354,25 @@ frac{1}{RC}$, de lo cual reemplazando por los valores medidos en el analizador
 'iticamente, la frecuencia de corte es $f_p 
 \backslash
 simeq 25kHz$.
- Para $f
+ El error de este valor respecto de los $24.3kHz$ medidos en la secci
+\backslash
+'on 
+\backslash
+ref{ssec:impedancia} es de un 3%, con lo cual est
+\backslash
+'a dentro de un margen razonable como para considerar que el modelo se puede
+ aplicar a este circuito.
+\backslash
+par
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Para $f
 \backslash
 ll f_p$, se esperar
 \backslash
@@ -1335,7 +1380,9 @@ ll f_p$, se esperar
 \backslash
 ~nal no se aten
 \backslash
-'ue, pues a medida que $f$ se hace despreciable frente a $f_p$, $H(f)
+'ue, pues a medida que $f$ se hace despreciable frente a $f_p$, $
+\backslash
+abs{H(f)}
 \backslash
 to 1$.
  A su vez, debido a que el circuito es de primer orden, se deber
@@ -1511,7 +1558,7 @@ status open
 
 \end_inset
 
-E
+
 \end_layout
 
 \begin_layout Plain Layout

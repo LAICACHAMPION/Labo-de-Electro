@@ -181,9 +181,10 @@ par
 \end_layout
 
 \begin_layout Standard
-Para la lectura en modo normal, se elige una frecuencia baja de trigger
- para poder observar más detenidamente en el osciloscopio.
- La frecuenca elegida fue de 100 Hz.
+Para la lectura en modo X-Y, se elige una frecuencia baja de trigger para
+ poder observar más detenidamente en el osciloscopio.
+ La frecuenca elegida fue de 100 Hz y se ajustó al generador de la señal
+ de entrada de manera acorde.
 \end_layout
 
 \begin_layout Standard
@@ -197,6 +198,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Imágenes/ej3a.png
+	scale 140
 
 \end_inset
 
@@ -238,6 +240,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Imágenes/ej3b.png
+	scale 130
 
 \end_inset
 
@@ -256,13 +259,15 @@ Barrido en modo normal
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Se logra apreciar un gráfico de un filtro de tipo pasabajos, en el que se
+ atenúan claramente las frecuencias altas.
+ 
 \end_layout
 
 \end_body

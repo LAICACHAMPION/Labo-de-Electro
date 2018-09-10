@@ -430,7 +430,9 @@ end{equation}
 
 \begin_layout Plain Layout
 
-Finalmente operando alegraicamente se obtiene la transeferencia del circuito
+Finalmente operando alegr
+\backslash
+'aicamente se obtiene la transeferencia del circuito
 \end_layout
 
 \begin_layout Plain Layout
@@ -497,8 +499,9 @@ A partir de la ecuaci
 \backslash
 'on 
 \backslash
-ref{eq=tfF}, podemos hallar la respuesta en frecuencia evaluandola en $s=
- i2
+ref{eq=tfF}, podemos hallar la respuesta en frecuencia evalu
+\backslash
+'andola en $s= i2
 \backslash
 pi f$.
  Dicha función transferencia corresponde a un sistema de primer orden.
@@ -528,6 +531,7 @@ circ$.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
 placement H
 wide false
@@ -535,8 +539,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename imagenes/ej2.png
+	filename imagenes/ej2_bode_mag.png
 	scale 70
 	rotateOrigin center
 
@@ -576,6 +581,7 @@ label{fig=ej2Mag}
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
 placement H
 wide false
@@ -583,8 +589,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename imagenes/ej2 - fase.png
+	filename imagenes/ej2_bode_fase.png
 	scale 70
 	rotateOrigin center
 
@@ -630,14 +637,14 @@ Las figuras
 \backslash
 ref{fig=ej2Mag} y 
 \backslash
-ref{fig=ej2Fase} son la superposicion de la respuesta en frecuencia medida
- la calculada y la medida indirectamente en el circuito pasa bajos.
-\end_layout
-
-\begin_layout Plain Layout
-
-La medicion de la respuesta en frecuencia en el circuito pasa bajos se obtuvo
- de la siguiente manera: suponiendo que el desfasaje entre la tensi
+ref{fig=ej2Fase} son la superposici
+\backslash
+'on de la respuesta en frecuencia medida, la calculada y la medida indirectament
+e en el circuito pasa bajos.
+ Esta 
+\backslash
+'ultima se obtuvo de la siguiente manera: suponiendo que el desfasaje entre
+ la tensi
 \backslash
 'on en la resistencia y el capacitor es de $90^
 \backslash
@@ -652,6 +659,8 @@ phase{V_R}=
 phase{V_C}+90^
 \backslash
 circ$.
+\backslash
+par
 \end_layout
 
 \begin_layout Plain Layout
@@ -667,8 +676,9 @@ Se puede observar en ambos graficos que el modelo predice con considerable
 \backslash
 'on en la resitencia, se hizo la suposici
 \backslash
-'on que a toda frecuencia la corriente y la tencion en el RC estan desfasados
- $90^
+'on que a toda frecuencia la corriente y la tensi
+\backslash
+'on en el RC estan desfasados $90^
 \backslash
 circ$.
    
@@ -687,7 +697,7 @@ status open
 
 Respuesta a se
 \backslash
-~nales trinagulares
+~nales triangulares
 \end_layout
 
 \end_inset
@@ -721,6 +731,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename imagenes/ej29_d5.png
 	scale 40
@@ -734,7 +745,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Respuesta a señal triangular de 500 Hz 
+Respuesta a señal triangular de 
+\begin_inset Formula $500Hz$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -790,6 +805,7 @@ ref{fig=ej2_500hz}.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
 placement H
 wide false
@@ -797,6 +813,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename imagenes/ej29_d4.png
 	scale 40
@@ -807,7 +824,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Respuesta a señal triangular de 24 KHz
+Respuesta a señal triangular de 
+\begin_inset Formula $24KHz$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -842,6 +863,7 @@ status open
 
 \begin_layout Plain Layout
 
+<<<<<<< HEAD
 Tal como se predijo anteriormente el circuito no se comporta como derivador.
  El tiempo característico del circuito es $
 \backslash
@@ -851,6 +873,25 @@ mu s$ y la mitad del período de la señal es de $21
 \backslash
 mu s$, del orden de cinco veces el tiempo característico lo que se observa
  en la figura es como el transitorio del circuito deforma la señal de entrada.
+=======
+Tal como se predijo anteriormente, el circuito no se comporta como derivador.
+ El tiempo caracter
+\backslash
+'istico del circuito es $
+\backslash
+tau =6.7
+\backslash
+mu s$ y la mitad del per
+\backslash
+'iodo de la señal es de $21
+\backslash
+mu s$, del orden de cinco veces el tiempo caracter
+\backslash
+'istico.
+ Lo que se observa en la figura es, entonces, c
+\backslash
+'omo el transitorio del circuito deforma la señal de entrada.
+>>>>>>> 9d658b0f389b0f560adb77a285abd5bc5b031873
  
 \end_layout
 
@@ -860,6 +901,7 @@ mu s$, del orden de cinco veces el tiempo característico lo que se observa
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
 placement H
 wide false
@@ -867,6 +909,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename imagenes/ej29_d6.png
 	scale 40
@@ -877,7 +920,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Respuesta a señal triangular de 100 KHz
+Respuesta a señal triangular de 
+\begin_inset Formula $100KHz$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -914,11 +961,31 @@ status open
 
 En la figura 
 \backslash
+<<<<<<< HEAD
 ref{fig=ej2_100k}, se observa que la señal de salida todavía se ve afectada
  por el transitorio del circuito, esto se debe a que la mitad del período
  de la frecuencia de entrada ($5
 \backslash
 mu s$) es comparable con los 6uS del tiempo característico del $RC$.
+=======
+ref{fig=ej2_100k}, se observa que la señal de salida todav
+\backslash
+'ia se ve afectada por el transitorio del circuito.
+ Esto se debe a que la mitad del per
+\backslash
+'iodo de la frecuencia de entrada($5
+\backslash
+mu s$) es comparable con los $6
+\backslash
+mu s$ del tiempo caracter
+\backslash
+'istico del RC.
+ Sin embargo, ya llega a apreciarse c
+\backslash
+'omo pr
+\backslash
+'acticamente las distorsiones son despreciables.
+>>>>>>> 9d658b0f389b0f560adb77a285abd5bc5b031873
 \end_layout
 
 \end_inset
