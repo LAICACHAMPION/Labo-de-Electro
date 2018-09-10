@@ -18,9 +18,9 @@ if nargin >= 3
 end
 
 if nargin >= 4
-    legendstr = cell2mat(varargin(1));
+    legendstr = varargin(1);
     for i=2:size(varargin,2)
-        legendstr= {legendstr;(cell2mat(varargin(i)))};
+        legendstr= [legendstr,varargin(i)];
     end
     lgd = legend(legendstr);
     lgd.Interpreter = 'latex';

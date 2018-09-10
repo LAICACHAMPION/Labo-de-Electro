@@ -843,14 +843,14 @@ status open
 \begin_layout Plain Layout
 
 Tal como se predijo anteriormente el circuito no se comporta como derivador.
- El tiempo caracteristico del circuito es $
+ El tiempo característico del circuito es $
 \backslash
 tau =6.7
 \backslash
-mu s$ y la mitad del perido de la señal es de $21
+mu s$ y la mitad del período de la señal es de $21
 \backslash
-mu s$ del orden de cinco veces el tiempo caracteristico lo que se observa
- en la figura es como el trnasitorio del circuito deforma la señal de entrada.
+mu s$, del orden de cinco veces el tiempo característico lo que se observa
+ en la figura es como el transitorio del circuito deforma la señal de entrada.
  
 \end_layout
 
@@ -914,10 +914,11 @@ status open
 
 En la figura 
 \backslash
-ref{fig=ej2_100k}, se observa que la señal de salida todavia se ve afectada
- por el transitorio del circuito, esto se deve a que la mitad del periodo
- de la frecuencia de entrada(5uS) es comparable con los 6uS del tiempo caracteri
-stico del RC.
+ref{fig=ej2_100k}, se observa que la señal de salida todavía se ve afectada
+ por el transitorio del circuito, esto se debe a que la mitad del período
+ de la frecuencia de entrada ($5
+\backslash
+mu s$) es comparable con los 6uS del tiempo característico del $RC$.
 \end_layout
 
 \end_inset

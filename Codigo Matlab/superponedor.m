@@ -33,7 +33,7 @@ semilogx(c_s(:,1)*1000,magMedida2,'o');
 % ylabel('Magnitud (dB)');
 % legend('Medición','Calculo','Simulación');
 formataxes(titulo, 'Frecuencia (Hz)', 'Mangnitud (dB)', ... % titulo y ejes
-                    'Medici\''on','C\''alculo')% legends
+                    'Medici\''on','C\''alculo', '$\sqrt{V_{in}^2+V_C^2}$')% legends
 if nargin==6
 saveas(maginitud,strcat(guardar,'_mag','.png'));
 end
@@ -52,7 +52,7 @@ semilogx(c_s(:,1).*1000,c_s(:,4),'o');
 % xlabel('Frecuencia (Hz)');
 % legend('Medición','Calculo','Simulación');
 formataxes(titulo, 'Frecuencia (Hz)', 'Fase ($^o$)', ... % titulo y ejes
-                    'Medici\''on','C\''alculo')% legends
+                    'Medici\''on','C\''alculo', '$(\langle V_C)+90^o$')% legends
 if nargin==6
 saveas(fase,strcat(guardar,'_fase','.png'));
 end

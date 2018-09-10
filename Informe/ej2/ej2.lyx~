@@ -885,6 +885,22 @@ Respuesta a señal triangular de 100 KHz
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{fig=ej2_100k}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -896,7 +912,12 @@ status open
 
 \begin_layout Plain Layout
 
- 
+En la figura 
+\backslash
+ref{fig=ej2_100k}, se observa que la señal de salida todavia se ve afectada
+ por el transitorio del circuito, esto se deve a que la mitad del periodo
+ de la frecuencia de entrada(5uS) es comparable con los 6uS del tiempo caracteri
+stico del RC.
 \end_layout
 
 \end_inset
